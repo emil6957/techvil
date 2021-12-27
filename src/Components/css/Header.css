@@ -1,0 +1,40 @@
+header {
+    position: relative;
+    height: 80px;
+    padding: 2rem;
+    background-color: #0E100F;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, #DB5DA5, #E38050)
+}
+
+.header__title {
+    font-size: 2.25rem;
+    margin-right: auto;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    margin-left: 6.25rem;
+    cursor: pointer;
+}
+
+.cart__img {
+    height: 32px;
+    width: 32px;
+}
+
+.cart__count {
+    font-size: 1.5rem;
+}
