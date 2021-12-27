@@ -1,0 +1,37 @@
+.hero {
+    height: calc(100vh - 80px);
+    background-image: url("../../Images/Hero-bkg.jpg");
+    background-position-y: -7.5rem;
+    background-size: 1440px;
+    padding-top: 5.5rem;
+    padding-left: 9.5rem;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.hero__content {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__title {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero__description {
+    font-size: 1.5rem;
+}
+
+.hero__button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #FF8E2B, #E51A00);
+    color: white;
+    border: 0;
+    border-radius: .5rem;
+    width: fit-content;
+    cursor: pointer;
+}
