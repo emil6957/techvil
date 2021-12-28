@@ -1,0 +1,70 @@
+.contact {
+    color: white;
+    background-color: black;
+    background-image: url("../../Images/Contact-bkg.jpg");
+    background-repeat: no-repeat;
+    background-size: 1700px;
+    background-position-x: center;
+    background-position-y: 200px; 
+    height: calc(100vh - 80px);
+    padding-top: 2rem;
+}
+
+.contact__title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.contact__form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__field {
+    position: relative;
+    border: 2px solid #989898;
+    background-color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin-bottom: 3rem
+}
+
+.label {
+    color: #989898;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 1.5rem;
+    cursor: text;
+    transition: transform 300ms ease-in-out, color 300ms 100ms ease-in-out;
+}
+
+.input {
+    font-family: "Roboto";
+    outline: none;
+    border: none;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    background: none;
+    font-size: 1.5rem;
+}
+
+.form__field:focus-within > .label, .input:not(:placeholder-shown) + .label {
+    transform: scale(0.9) translate(-1.5rem, -3rem);
+    color: white;
+}
+
+.form__btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border: 0;
+    border-radius: .5rem;
+    background: linear-gradient(to right, #FF8E2B, #E51A00);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+}
