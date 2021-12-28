@@ -1,4 +1,4 @@
-import "./css/Nav.css";
+import "./Nav.css";
 import { Link } from "react-router-dom";
 
 export default function Nav() {

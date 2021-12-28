@@ -1,6 +1,6 @@
-import "./css/Header.css";
-import Nav from "./Nav";
-import Cart from "../Images/Cart.svg";
+import "./Header.css";
+import Nav from "../Nav/Nav";
+import Cart from "../../Images/Cart.svg";
 
 export default function Header() {
     return (
