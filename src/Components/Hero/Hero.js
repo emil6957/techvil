@@ -1,4 +1,5 @@
 import "./Hero.css";
+import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
@@ -13,6 +14,7 @@ export default function Hero() {
                 </p>
                 <Link to="/Shop"><button className="hero__button">Shop Now</button></Link>
             </div>
+            <Footer />
         </section>
     )
 }

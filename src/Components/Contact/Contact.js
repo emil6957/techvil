@@ -1,8 +1,9 @@
 import "./Contact.css";
+import Footer from "../Footer/Footer";
 
 export default function Contact() {
     return (
-        <div className="contact">
+        <section className="contact">
             <h1 className="contact__title">Email Us</h1>
             <form className="contact__form">
                 <div className="form__field">
@@ -19,7 +20,8 @@ export default function Contact() {
                 </div>
                 <button className="form__btn" type="submit" >Submit</button>
             </form>
-        </div>
+            <Footer />
+        </section>
 
     )
 }
