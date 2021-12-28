@@ -1,4 +1,5 @@
 import "./css/Hero.css";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
     return (
@@ -10,7 +11,7 @@ export default function Hero() {
                     and laptops including a wide range of different parts for your 
                     system at several price ranges to make your budget setup
                 </p>
-                <button className="hero__button">Shop Now</button>
+                <Link to="/Shop"><button className="hero__button">Shop Now</button></Link>
             </div>
         </section>
     )
