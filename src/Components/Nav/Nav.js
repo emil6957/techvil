@@ -6,8 +6,8 @@ export default function Nav() {
         <nav>
             <ul className="page-links">
                 <li className="nav-link"><Link to="/">Home</Link></li>
-                <li className="nav-link"><Link to="/Shop">Shop</Link></li>
-                <li className="nav-link"><Link to="/Contact">Contact</Link></li>
+                <li className="nav-link"><Link to="/shop">Shop</Link></li>
+                <li className="nav-link"><Link to="/contact">Contact</Link></li>
             </ul>
         </nav>
     )

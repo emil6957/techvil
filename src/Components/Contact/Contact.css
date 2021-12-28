@@ -7,12 +7,13 @@
     background-position-x: center;
     background-position-y: 200px; 
     height: calc(100vh - 80px);
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .contact__title {
     font-size: 3rem;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .contact__form {
