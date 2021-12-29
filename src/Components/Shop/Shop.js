@@ -1,5 +1,10 @@
+import "./Shop.css";
+import Aside from "../Aside/Aside";
+
 export default function Shop() {
     return(
-        <h1>Yo from shop</h1>
+        <section className="shop">
+            <Aside />
+        </section>
     )
 }

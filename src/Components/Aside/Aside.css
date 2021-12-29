@@ -1,0 +1,73 @@
+aside {
+    font-size: 24px;
+    background-color: #858585;
+    width: 30%;
+    padding-top: 2rem;
+    height: calc(100vh - 80px);
+}
+
+.aside__title {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.all__title, .computer-parts__title, .pre-built__title {
+    margin: 0;
+}
+
+.all__header, .computer-parts__header, .pre-built__header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.aside__all {
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+}
+
+.all__items {
+    position: relative;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.computer-parts__items, .pre-built__items {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.all__items::after, .computer-parts__items::after, .pre-built__items::after {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+
+.all__items p::after, .computer-parts__items p::after, .pre-built__items p::after {
+    content: "";
+    position: absolute;
+    transform: translateY(.8rem);
+    left: -2rem;
+    height: 2px;
+    width: 1rem;
+    background-color: black;
+}
+
+.arrow {
+    height: 24px;
+    width: 24px;
+    transform: rotate(0deg);
+}
+
+
