@@ -1,0 +1,12 @@
+.bottom-main {
+    margin-top: 5rem;
+    border: 1px solid black;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}

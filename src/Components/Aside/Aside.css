@@ -67,7 +67,8 @@ aside {
 .arrow {
     height: 24px;
     width: 24px;
-    transform: rotate(0deg);
 }
 
-
+.item {
+    cursor: pointer;
+}

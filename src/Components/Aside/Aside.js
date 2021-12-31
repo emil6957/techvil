@@ -6,6 +6,7 @@ export default function Aside() {
     const [showAllItems, setShowAllItems] = useState(false);
     const [showComputerPartsItems, setShowComputerPartsItems] = useState(false);
     const [showPreBuiltItems, setShowPreBuiltItems] = useState(false);
+    const [filterBy, setFilterBy] = useState("all");
 
     const stylesAll = {
         display: showAllItems ? "inherit" : "none",
@@ -45,6 +46,10 @@ export default function Aside() {
         setShowPreBuiltItems(prevBool => !prevBool);
     }
 
+    function handleFilter(event) {
+        setFilterBy(event.target.id);
+    }
+
     return (
         <aside>
             <h2 className="aside__title">Catagories</h2>
@@ -60,9 +65,9 @@ export default function Aside() {
                             <img style={computerPartsArrow} className="computer-parts__arrow arrow" src={Arrow} alt="Arrow" />
                         </div>
                         <div style={stylesComputerParts} className="computer-parts__items">
-                            <p>CPU</p>
-                            <p>GPU</p>
-                            <p>RAM</p>
+                            <p className="item" id="CPU" onClick={(e) => handleFilter(e)}>CPU</p>
+                            <p className="item" id="GPU" onClick={(e) => handleFilter(e)}>GPU</p>
+                            <p className="item" id="RAM" onClick={(e) => handleFilter(e)}>RAM</p>
                         </div>
                     </div>
                     <div className="all__pre-built">
@@ -71,8 +76,8 @@ export default function Aside() {
                             <img style={preBuiltArrow} className="pre-built__arrow arrow" src={Arrow} alt="Arrow" />
                         </div>
                         <div style={stylesPreBuilt} className="pre-built__items">
-                            <p>Desktop Computers</p>
-                            <p>Laptops</p>
+                            <p className="item" id="desktop-computers" onClick={(e) => handleFilter(e)}>Desktop Computers</p>
+                            <p className="item" id="laptops" onClick={(e) => handleFilter(e)}>Laptops</p>
                         </div>
                     </div>
                 </div>
