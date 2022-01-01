@@ -1,11 +1,10 @@
 import "./BottomMain.css";
 import Card from "../Card/Card";
 import data from "../../Data/ProductData";
-import { useState } from "react";
 
 export default function BottomMain({ search, filterBy }) {
 
-    let cardElements = <h1></h1>
+    let cardElements; 
     if(filterBy === "all") {
         const CPUS = data.CPU.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
         const GPUS = data.GPU.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);

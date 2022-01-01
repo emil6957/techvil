@@ -9,7 +9,6 @@ export default function Main({ filterBy }) {
     function handleSearch(e) {
         const { value } = e.target;
         setSearch(value);
-        console.log(value);
     }
 
     return (
