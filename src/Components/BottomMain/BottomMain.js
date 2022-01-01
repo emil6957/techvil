@@ -2,7 +2,7 @@ import "./BottomMain.css";
 import Card from "../Card/Card";
 import data from "../../Data/ProductData";
 
-export default function BottomMain({ search, filterBy }) {
+export default function BottomMain({ sortBy, search, filterBy }) {
 
     let cardElements; 
     if(filterBy === "all") {
@@ -35,8 +35,27 @@ export default function BottomMain({ search, filterBy }) {
         cardElements = cardElements.filter(item => item.props.name.toLowerCase().includes(search.toLowerCase()));
     }
 
+    function sort() {
+        if(sortBy === "a-z") {
+            cardElements.sort((a, b) => a.props.name.toLowerCase() < b.props.name.toLowerCase() ? -1 : 1);
+        }
+        if(sortBy === "z-a") {
+            cardElements.sort((a, b) => b.props.name.toLowerCase() < a.props.name.toLowerCase() ? -1 : 1);
+        }
+        if(sortBy === "low-high") {
+            cardElements.sort((a, b) => a.props.price - b.props.price);
+        }
+        if(sortBy === "high-low") {
+            cardElements.sort((a, b) => b.props.price - a.props.price);
+        }
+    }
+
     if(search !== "") {
         searchBy();
+    }
+
+    if(sortBy !== "") {
+        sort() 
     }
 
     return (
