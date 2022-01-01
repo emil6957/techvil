@@ -71,8 +71,8 @@ export default function Aside({ handleFilter }) {
                             <img style={preBuiltArrow} className="pre-built__arrow arrow" src={Arrow} alt="Arrow" />
                         </div>
                         <div style={stylesPreBuilt} className="pre-built__items">
-                            <p className="item" id="desktop-computers" onClick={(e) => handleFilter(e)}>Desktop Computers</p>
-                            <p className="item" id="laptops" onClick={(e) => handleFilter(e)}>Laptops</p>
+                            <p className="item" id="Desktop" onClick={(e) => handleFilter(e)}>Desktop Computers</p>
+                            <p className="item" id="Laptop" onClick={(e) => handleFilter(e)}>Laptops</p>
                         </div>
                     </div>
                 </div>

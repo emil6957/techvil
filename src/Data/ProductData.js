@@ -25,6 +25,17 @@ import crucialDDR4 from "../Images/Products/RAM/Crucial RAM 16GB DDR4 2400MHz De
 import crucialDDR4Second from "../Images/Products/RAM/Crucial RAM 16GB DDR4 2400MHz Desktop Memory 2nd.jpg";
 import crucialDDR4Third from "../Images/Products/RAM/Crucial RAM 16GB DDR4 2400MHz Desktop Memory 3rd.jpg";
 
+import alphaSync from "../Images/Products/Desktop/AlphaSync Diamond.jpg";
+import alphaSyncSecond from "../Images/Products/Desktop/AlphaSync Diamond 2nd.jpg";
+import alphaSyncThird from "../Images/Products/Desktop/AlphaSync Diamond 3rd.jpg";
+import elite from "../Images/Products/Desktop/Elite AMD Ryzen 5 3600 4.2GHz 6 Core DDR4.jpg";
+import eliteSecond from "../Images/Products/Desktop/Elite AMD Ryzen 5 3600 4.2GHz 6 Core DDR4 2nd.jpg";
+import eliteThird from "../Images/Products/Desktop/Elite AMD Ryzen 5 3600 4.2GHz 6 Core DDR4 3rd.jpg";
+
+import hp225 from "../Images/Products/Desktop/HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop.jpg";
+import hp225Second from "../Images/Products/Desktop/HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop 2nd.jpg";
+import hp225Third from "../Images/Products/Desktop/HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop 3rd.jpg";
+
 const Data = {
     CPU: {
         items: [
@@ -90,6 +101,32 @@ const Data = {
                 img: crucialDDR4,
                 price: 57.64,
                 info: "DDR4, 16GB, 2400MHz, form factor = DIMM, item model = CT16G4DFD824A"
+            }
+        ]
+    },
+    Desktop: {
+        items: [
+            {
+                name: "AlphaSync Diamond AMD Ryzen 5 16GB RAM 500GB SSD Gaming Desktop PC",
+                img: alphaSync,
+                price: 699.99,
+                info: "AMD Ryzen 5  3.9GHz, 16GB RAM, 500GB SSD, Windows 11 Home, AMD Intergrated Graphics Card, cooling = AMD Standard cooler"
+            },
+            {
+                name: "Elite AMD Ryzen 5 DDR4 4.2GHz 6 core",
+                img: elite,
+                price: 419.99,
+                info: "AMD Ryzen 5 3600 4.2Ghz Six Core DDR4 Business & Home PC Gaming System"
+            }
+        ]
+    },
+    Laptop: {
+        items: [
+            {
+                name: "HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop",
+                img: hp225,
+                price: 457.97,
+                info: "Processor - AMD Ryzen 5 3500U, Graphics Card - Radeon Graphics, Screen Size - 15.6inch full hd screen, RAM - 8GB, SSD - 256GB, Width - 36cm, OP - windows 10"
             }
         ]
     }
