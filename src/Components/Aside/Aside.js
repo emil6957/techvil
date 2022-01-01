@@ -2,11 +2,10 @@ import "./Aside.css";
 import Arrow from "../../Images/Arrow.svg";
 import { useState } from "react";
 
-export default function Aside() {
+export default function Aside({ handleFilter }) {
     const [showAllItems, setShowAllItems] = useState(false);
     const [showComputerPartsItems, setShowComputerPartsItems] = useState(false);
     const [showPreBuiltItems, setShowPreBuiltItems] = useState(false);
-    const [filterBy, setFilterBy] = useState("all");
 
     const stylesAll = {
         display: showAllItems ? "inherit" : "none",
@@ -44,10 +43,6 @@ export default function Aside() {
 
     function displayPreBuilt(event) {
         setShowPreBuiltItems(prevBool => !prevBool);
-    }
-
-    function handleFilter(event) {
-        setFilterBy(event.target.id);
     }
 
     return (
