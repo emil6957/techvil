@@ -50,13 +50,13 @@ export default function Aside({ handleFilter }) {
             <h2 className="aside__title">Catagories</h2>
             <div className="aside__all">
                 <div className="all__header" onClick={(e) => displayAll(e)}>
-                    <p className="all__title">All</p>
+                    <p className="all__title" id="all" onClick={(e) => handleFilter(e)}>All</p>
                     <img style={allArrow} className="all__arrow arrow" src={Arrow} alt="Arrow" />
                 </div>
                 <div style={stylesAll} className="all__items">
                     <div className="all__computer-parts">
                         <div className="computer-parts__header" onClick={(e) => displayComputerParts(e)}>
-                            <p className="computer-parts__title">Computer Parts</p>
+                            <p className="computer-parts__title" id="computer-parts" onClick={(e) => handleFilter(e)}>Computer Parts</p>
                             <img style={computerPartsArrow} className="computer-parts__arrow arrow" src={Arrow} alt="Arrow" />
                         </div>
                         <div style={stylesComputerParts} className="computer-parts__items">
@@ -67,7 +67,7 @@ export default function Aside({ handleFilter }) {
                     </div>
                     <div className="all__pre-built">
                         <div className="pre-built__header" onClick={(e) => displayPreBuilt(e)}>
-                            <p className="pre-built__title">Pre-built</p>
+                            <p className="pre-built__title" id="pre-built" onClick={(e) => handleFilter(e)}>Pre-built</p>
                             <img style={preBuiltArrow} className="pre-built__arrow arrow" src={Arrow} alt="Arrow" />
                         </div>
                         <div style={stylesPreBuilt} className="pre-built__items">

@@ -1,6 +1,8 @@
 .bottom-main {
+    height: 80%;
     margin-top: 5rem;
     border: 1px solid black;
+    overflow-y: scroll;
 }
 
 .products {

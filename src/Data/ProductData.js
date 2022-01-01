@@ -1,3 +1,5 @@
+import { nanoid } from "nanoid";
+
 import intel5 from "../Images/Products/CPU/Intel Core i5 11th Gen 6 Core.jpg";
 import intel5Second from "../Images/Products/CPU/Intel Core i5 11th Gen 6 Core 2nd.jpg";
 import intel7 from "../Images/Products/CPU/Intel Core i7 11th Gen 8 Core.jpg";
@@ -40,6 +42,7 @@ const Data = {
     CPU: {
         items: [
             {
+                id: nanoid(),
                 name: "Intel Core i5 11th Gen 6 Core",
                 img: intel5,
                 price: 235.44,
@@ -47,18 +50,21 @@ const Data = {
                 
             },
             {
+                id: nanoid(),
                 name: "Intel Core i7 11th Gen 8 Core",
                 img: intel7,
                 price: 332.99,
                 info: "11th Gen Rocket Lake, i7 11700KF, Socket 1200, 8 Cores 16 Threads, 3.6GHz"
             },
             {
+                id: nanoid(),
                 name: "Intel Core i9 11th Gen 8 Core",
                 img: intel9,
                 price: 416.99,
                 info: "11th Gen Rocket Lake, i9 11900, Socket 1200, 8 Cores 16 Threads, 2.5GHz"
             },
             {
+                id: nanoid(),
                 name: "AMD Ryzen 7 3800X",
                 img: ryzen7,
                 price: 294.75,
@@ -69,18 +75,21 @@ const Data = {
     GPU: {
         items: [
             {
+                id: nanoid(),
                 name: "MSI GeForce GTX 1650 Ventus",
                 img: gtx1650,
                 price: 249.00,
                 info: "4GB Graphics Memory, PCI Express 3.0 x 16 interface, cooling type = active fan, pre overclocked edition"
             },
             {
+                id: nanoid(),
                 name: "Gigabyte GeForce GTX 1080 Ti",
                 img: gtx1080Ti,
                 price: 340.00,
                 info: "Windforce 3x Cooling system, composite heat-pipes, RGB fusion, 3d active fan"
             },
             {
+                id: nanoid(),
                 name: "GeForce RTX 3060 Ti Ventus",
                 img: rtx3060Ti,
                 price: 699.00,
@@ -91,12 +100,14 @@ const Data = {
     RAM: {
         items: [
             {
+                id: nanoid(),
                 name: "Corsair Vengeance RGB Black PRO 16GB (2 x 8GB) DDR 3200MHz",
                 img: corsairDDR4,
                 price: 69.81,
                 info: "Dynamic multi-zone lighting, next generation software, 3200MHz 16GB (2 x 8GB), LED RGBS"
             },
             {
+                id: nanoid(),
                 name: "Crucial RAM 16GB DDR4 2400MHz Desktop Memory",
                 img: crucialDDR4,
                 price: 57.64,
@@ -107,12 +118,14 @@ const Data = {
     Desktop: {
         items: [
             {
+                id: nanoid(),
                 name: "AlphaSync Diamond AMD Ryzen 5 16GB RAM 500GB SSD Gaming Desktop PC",
                 img: alphaSync,
                 price: 699.99,
                 info: "AMD Ryzen 5  3.9GHz, 16GB RAM, 500GB SSD, Windows 11 Home, AMD Intergrated Graphics Card, cooling = AMD Standard cooler"
             },
             {
+                id: nanoid(),
                 name: "Elite AMD Ryzen 5 DDR4 4.2GHz 6 core",
                 img: elite,
                 price: 419.99,
@@ -123,6 +136,7 @@ const Data = {
     Laptop: {
         items: [
             {
+                id: nanoid(),
                 name: "HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop",
                 img: hp225,
                 price: 457.97,

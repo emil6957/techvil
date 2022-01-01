@@ -1,12 +1,12 @@
 import "./TopMain.css";
 import Search from "../../Images/MagnifyingGlass.svg";
 
-export default function TopMain() {
+export default function TopMain({ search, handleSearch }) {
     return (
         <div className="top-main">
             <div className="search">
                 <img className="search__img" src={Search} alt="Magnifying Glass" />
-                <input className="search__input" type="text" placeholder="Search..." />
+                <input value={search} onChange={(e) => handleSearch(e)} className="search__input" type="text" placeholder="Search..." />
             </div>
             <select defaultValue="placeholder" className="dropdown">
                 <option disabled value="placeholder">Sort by...</option>
