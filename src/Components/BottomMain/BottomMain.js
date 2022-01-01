@@ -33,7 +33,7 @@ export default function BottomMain({ search, filterBy }) {
     }
 
     function searchBy() {
-        cardElements = cardElements.filter(item => item.props.name.includes(search));
+        cardElements = cardElements.filter(item => item.props.name.toLowerCase().includes(search.toLowerCase()));
     }
 
     if(search !== "") {
