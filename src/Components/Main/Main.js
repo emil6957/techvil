@@ -3,7 +3,7 @@ import TopMain from "../TopMain/TopMain";
 import BottomMain from "../BottomMain/BottomMain";
 import { useState } from "react";
 
-export default function Main({ filterBy }) {
+export default function Main({ addItemToCart, filterBy }) {
     const [search, setSearch] = useState("");
     const [sortBy, setSortBy] = useState("");
 
@@ -15,13 +15,12 @@ export default function Main({ filterBy }) {
     function handleSort(e) {
         const { value } = e.target;
         setSortBy(value);
-        console.log(value);
     }
 
     return (
         <main>
             <TopMain handleSort={handleSort} search={search} handleSearch={handleSearch} />
-            <BottomMain sortBy={sortBy} search={search} filterBy={filterBy} />
+            <BottomMain addItemToCart={addItemToCart} sortBy={sortBy} search={search} filterBy={filterBy} />
         </main>
     )
 }

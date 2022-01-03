@@ -2,33 +2,33 @@ import "./BottomMain.css";
 import Card from "../Card/Card";
 import data from "../../Data/ProductData";
 
-export default function BottomMain({ sortBy, search, filterBy }) {
+export default function BottomMain({ addItemToCart, sortBy, search, filterBy }) {
 
     let cardElements; 
     if(filterBy === "all") {
-        const CPUS = data.CPU.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
-        const GPUS = data.GPU.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
-        const RAMS = data.RAM.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
-        const Desktops = data.Desktop.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
-        const Laptops = data.Laptop.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
+        const CPUS = data.CPU.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
+        const GPUS = data.GPU.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
+        const RAMS = data.RAM.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
+        const Desktops = data.Desktop.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
+        const Laptops = data.Laptop.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
         cardElements = [...CPUS, ...GPUS, ...RAMS, ...Desktops, ...Laptops];
     }
 
     if(filterBy === "computer-parts") {
-        const CPUS = data.CPU.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
-        const GPUS = data.GPU.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
-        const RAMS = data.RAM.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
+        const CPUS = data.CPU.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
+        const GPUS = data.GPU.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
+        const RAMS = data.RAM.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
         cardElements = [...CPUS, ...GPUS, ...RAMS];
     } 
 
     if(filterBy === "pre-built") {
-        const Desktops = data.Desktop.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
-        const Laptops = data.Laptop.items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
+        const Desktops = data.Desktop.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id}  />);
+        const Laptops = data.Laptop.items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id}  />);
         cardElements = [...Desktops, ...Laptops];
     }
 
     if(filterBy === "CPU" || filterBy === "GPU" || filterBy === "RAM" || filterBy === "Desktop" || filterBy === "Laptop") {
-        cardElements =  data[filterBy].items.map(item => <Card key={item.id} id={item.id} name={item.name} img={item.img} price={item.price} />);
+        cardElements =  data[filterBy].items.map(item => <Card addItemToCart={addItemToCart} item={item} key={item.id} />);
     }
 
     function searchBy() {
