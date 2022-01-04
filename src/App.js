@@ -20,7 +20,7 @@ function App() {
           <Header cart={cart} />
         <Routes>
           <Route path="/" element={ <Hero /> } />
-          <Route path="/shop" element={ <Shop addItemToCart={addItemToCart} /> } />
+          <Route path="/shop/*" element={ <Shop addItemToCart={addItemToCart} /> } />
           <Route path="/contact" element={ <Contact /> } />
         </Routes>
       </div>

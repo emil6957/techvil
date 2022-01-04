@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Link, useLocation, } from "reac
 
 import "./Card.css";
 
-export default function Card({ addItemToCart, item }) {
+export default function Card({ getProduct, addItemToCart, item }) {
     const { id, name, img, price } = item;
-    const { pathname } = useLocation();
 
     return (
         <div id={id} className="card">
@@ -13,7 +12,7 @@ export default function Card({ addItemToCart, item }) {
             <img className="img" src={img} alt={img} />
             <p className="price">£{price}</p>
             <div className="card__hover">
-                <button className="hover__button"><Link to={`/shop/`}>More Info</Link></button>
+                <button onClick={() => getProduct(item)} className="hover__button"><Link to={`/shop/${name}`}>More Info</Link></button>
                 <button onClick={() => addItemToCart(item)} className="hover__button">Add to Cart</button>
             </div>
 
