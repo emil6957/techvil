@@ -1,0 +1,33 @@
+.cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(100vh - 80px);
+    width: 500px;
+    background: linear-gradient(to right, #DB5DA5, #E38050);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    transform: scaleX(0);
+    transform-origin: 100%;
+    animation: slide 500ms forwards;
+    animation-delay: 100ms;
+}
+
+@keyframes slide {
+    100% { transform: scaleX(1); }
+}
+
+.overlay {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    height: calc(100vh - 80px);
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+    animation: fade-in 600ms forwards;
+}
+
+@keyframes fade-in {
+    100% { background-color: rgba(0, 0, 0, .7); }
+}

@@ -15,7 +15,7 @@ header::after {
     left: 0;
     height: 2px;
     width: 100%;
-    background: linear-gradient(to right, #DB5DA5, #E38050)
+    background: linear-gradient(to right, #DB5DA5, #E38050);
 }
 
 .header__title {
@@ -23,7 +23,7 @@ header::after {
     margin-right: auto;
 }
 
-.cart {
+.header__cart {
     display: flex;
     align-items: center;
     margin-left: 6.25rem;
