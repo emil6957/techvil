@@ -3,12 +3,13 @@ import { nanoid } from "nanoid";
 import { useState } from "react";
 
 export default function MoreInfo({ addItemToCart, item }) {
-    const [ammount, setAmmount] = useState(1);
     const { id, name, img, price, info, extraImgs } = item;
     const listInfo = info.split(",");
+    const [ammount, setAmmount] = useState(1);
+    const [mainImg, setMainImg] = useState(img);
 
     const listElements = listInfo.map(item => <li className="info" key={nanoid()}>{item}</li>)
-    const extraImgElements = extraImgs.map(img => <img key={nanoid()} className="img-card" src={img} alt="Product" />)
+    const extraImgElements = extraImgs.map(img => <img onClick={() => setMainImg(img)} key={nanoid()} className="img-card" src={img} alt="Product" />)
 
     function incrementAmmount() {
         setAmmount(prevAmmount => prevAmmount + 1);
@@ -43,7 +44,7 @@ export default function MoreInfo({ addItemToCart, item }) {
                 <button className="button">Checkout</button>
             </div>
             <div className="imgs">
-                <img className="img" src={img} alt="Product" />
+                <img className="img" src={mainImg} alt="Product" />
                 <div className="img-cards-container">
                     {extraImgElements}
                 </div>

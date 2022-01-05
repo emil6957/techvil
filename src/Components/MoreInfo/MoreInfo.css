@@ -99,4 +99,5 @@
     padding: 10px;
     border-radius: .5rem;
     border: solid black 1px;
+    cursor: pointer;
 }
