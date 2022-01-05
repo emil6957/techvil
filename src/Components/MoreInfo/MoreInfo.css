@@ -84,3 +84,19 @@
 .plus {
     border-left: solid black 1px;
 }
+
+.img-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 3rem;
+}
+
+.img-card {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    border-radius: .5rem;
+    border: solid black 1px;
+}

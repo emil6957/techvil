@@ -4,10 +4,11 @@ import { useState } from "react";
 
 export default function MoreInfo({ addItemToCart, item }) {
     const [ammount, setAmmount] = useState(1);
-    const { id, name, img, price, info } = item;
+    const { id, name, img, price, info, extraImgs } = item;
     const listInfo = info.split(",");
 
     const listElements = listInfo.map(item => <li className="info" key={nanoid()}>{item}</li>)
+    const extraImgElements = extraImgs.map(img => <img key={nanoid()} className="img-card" src={img} alt="Product" />)
 
     function incrementAmmount() {
         setAmmount(prevAmmount => prevAmmount + 1);
@@ -43,6 +44,9 @@ export default function MoreInfo({ addItemToCart, item }) {
             </div>
             <div className="imgs">
                 <img className="img" src={img} alt="Product" />
+                <div className="img-cards-container">
+                    {extraImgElements}
+                </div>
             </div>
         </div>
     )
