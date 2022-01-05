@@ -32,21 +32,21 @@ export default function BottomMain({ getProduct, addItemToCart, sortBy, search, 
     }
 
     function searchBy() {
-        cardElements = cardElements.filter(item => item.props.name.toLowerCase().includes(search.toLowerCase()));
+        cardElements = cardElements.filter(card => card.props.item.name.toLowerCase().includes(search.toLowerCase()));
     }
 
     function sort() {
         if(sortBy === "a-z") {
-            cardElements.sort((a, b) => a.props.name.toLowerCase() < b.props.name.toLowerCase() ? -1 : 1);
+            cardElements.sort((a, b) => a.props.item.name.toLowerCase() < b.props.item.name.toLowerCase() ? -1 : 1);
         }
         if(sortBy === "z-a") {
-            cardElements.sort((a, b) => b.props.name.toLowerCase() < a.props.name.toLowerCase() ? -1 : 1);
+            cardElements.sort((a, b) => b.props.item.name.toLowerCase() < a.props.item.name.toLowerCase() ? -1 : 1);
         }
         if(sortBy === "low-high") {
-            cardElements.sort((a, b) => a.props.price - b.props.price);
+            cardElements.sort((a, b) => a.props.item.price - b.props.item.price);
         }
         if(sortBy === "high-low") {
-            cardElements.sort((a, b) => b.props.price - a.props.price);
+            cardElements.sort((a, b) => b.props.item.price - a.props.item.price);
         }
     }
 
