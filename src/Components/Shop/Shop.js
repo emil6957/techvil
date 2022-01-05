@@ -19,7 +19,7 @@ export default function Shop({ addItemToCart }) {
     return(
         <Routes>
             <Route path="/" element={<ShopMain getProduct={getProduct} handleFilter={handleFilter} addItemToCart={addItemToCart} filterBy={filterBy} />} />
-            <Route path="/:name" element={<MoreInfo item={displayProduct} />} />
+            <Route path="/:name" element={<MoreInfo addItemToCart={addItemToCart} item={displayProduct} />} />
         </Routes>
     )
 }
