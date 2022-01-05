@@ -46,29 +46,46 @@ const Data = {
                 name: "Intel Core i5 11th Gen 6 Core",
                 img: intel5,
                 price: 235.44,
-                info: "11th Gen Rocket Lake, i5 11600K, Socket 1200, 6 Cores 12 Threads, 3.9GHz"
-                
+                info: "11th Gen Rocket Lake, i5 11600K, Socket 1200, 6 Cores 12 Threads, 3.9GHz",
+                extraImgs: [
+                    intel5,
+                    intel5Second,
+                ]
+
             },
             {
                 id: nanoid(),
                 name: "Intel Core i7 11th Gen 8 Core",
                 img: intel7,
                 price: 332.99,
-                info: "11th Gen Rocket Lake, i7 11700KF, Socket 1200, 8 Cores 16 Threads, 3.6GHz"
+                info: "11th Gen Rocket Lake, i7 11700KF, Socket 1200, 8 Cores 16 Threads, 3.6GHz",
+                extraImgs: [
+                    intel7,
+                    intel7Second
+                ]
             },
             {
                 id: nanoid(),
                 name: "Intel Core i9 11th Gen 8 Core",
                 img: intel9,
                 price: 416.99,
-                info: "11th Gen Rocket Lake, i9 11900, Socket 1200, 8 Cores 16 Threads, 2.5GHz"
+                info: "11th Gen Rocket Lake, i9 11900, Socket 1200, 8 Cores 16 Threads, 2.5GHz",
+                extraImgs: [
+                    intel9,
+                    intel9Second,
+                ]
             },
             {
                 id: nanoid(),
                 name: "AMD Ryzen 7 3800X",
                 img: ryzen7,
                 price: 294.75,
-                info: "8 Cores 16 Threads, 3.9GHz"
+                info: "8 Cores 16 Threads, 3.9GHz",
+                extraImgs: [
+                    ryzen7,
+                    ryzen7Second,
+                    ryzen7Third,
+                ]
             }
         ]
     },
@@ -79,21 +96,36 @@ const Data = {
                 name: "MSI GeForce GTX 1650 Ventus",
                 img: gtx1650,
                 price: 249.00,
-                info: "4GB Graphics Memory, PCI Express 3.0 x 16 interface, cooling type = active fan, pre overclocked edition"
+                info: "4GB Graphics Memory, PCI Express 3.0 x 16 interface, cooling type = active fan, pre overclocked edition",
+                extraImgs: [
+                    gtx1650,
+                    gtx1650Second,
+                    gtx1650Third,
+                ]
             },
             {
                 id: nanoid(),
                 name: "Gigabyte GeForce GTX 1080 Ti",
                 img: gtx1080Ti,
                 price: 340.00,
-                info: "Windforce 3x Cooling system, composite heat-pipes, RGB fusion, 3d active fan"
+                info: "Windforce 3x Cooling system, composite heat-pipes, RGB fusion, 3d active fan",
+                extraImgs: [
+                    gtx1080Ti,
+                    gtx1080TiSecond,
+                    gtx1080TiThird,
+                ]
             },
             {
                 id: nanoid(),
                 name: "GeForce RTX 3060 Ti Ventus",
                 img: rtx3060Ti,
                 price: 699.00,
-                info: "8GB Graphics Memory, PCI Express 4.0 x 16 interface, cooling type = dynamic fan, pre overclocked edition"
+                info: "8GB Graphics Memory, PCI Express 4.0 x 16 interface, cooling type = dynamic fan, pre overclocked edition",
+                extraImgs: [
+                    rtx3060Ti,
+                    rtx3060TiSecond,
+                    rtx3060TiThird,
+                ]
             }
         ]
     },
@@ -104,14 +136,24 @@ const Data = {
                 name: "Corsair Vengeance RGB Black PRO 16GB (2 x 8GB) DDR 3200MHz",
                 img: corsairDDR4,
                 price: 69.81,
-                info: "Dynamic multi-zone lighting, next generation software, 3200MHz 16GB (2 x 8GB), LED RGBS"
+                info: "Dynamic multi-zone lighting, next generation software, 3200MHz 16GB (2 x 8GB), LED RGBS",
+                extraImgs: [
+                    corsairDDR4,
+                    corsairDDR4Second,
+                    corsairDDR4Third,
+                ]
             },
             {
                 id: nanoid(),
                 name: "Crucial RAM 16GB DDR4 2400MHz Desktop Memory",
                 img: crucialDDR4,
                 price: 57.64,
-                info: "DDR4, 16GB, 2400MHz, form factor = DIMM, item model = CT16G4DFD824A"
+                info: "DDR4, 16GB, 2400MHz, form factor = DIMM, item model = CT16G4DFD824A",
+                extraImgs: [
+                    crucialDDR4,
+                    crucialDDR4Second,
+                    crucialDDR4Third,
+                ]
             }
         ]
     },
@@ -122,14 +164,24 @@ const Data = {
                 name: "AlphaSync Diamond AMD Ryzen 5 16GB RAM 500GB SSD Gaming Desktop PC",
                 img: alphaSync,
                 price: 699.99,
-                info: "AMD Ryzen 5  3.9GHz, 16GB RAM, 500GB SSD, Windows 11 Home, AMD Intergrated Graphics Card, cooling = AMD Standard cooler"
+                info: "AMD Ryzen 5  3.9GHz, 16GB RAM, 500GB SSD, Windows 11 Home, AMD Intergrated Graphics Card, cooling = AMD Standard cooler",
+                extraImgs: [
+                    alphaSync,
+                    alphaSyncSecond,
+                    alphaSyncThird,
+                ]
             },
             {
                 id: nanoid(),
                 name: "Elite AMD Ryzen 5 DDR4 4.2GHz 6 core",
                 img: elite,
                 price: 419.99,
-                info: "AMD Ryzen 5 3600 4.2Ghz Six Core DDR4 Business & Home PC Gaming System"
+                info: "AMD Ryzen 5 3600 4.2Ghz Six Core DDR4 Business & Home PC Gaming System",
+                extraImgs: [
+                    elite,
+                    eliteSecond,
+                    eliteThird,
+                ]
             }
         ]
     },
@@ -140,7 +192,12 @@ const Data = {
                 name: "HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop",
                 img: hp225,
                 price: 457.97,
-                info: "Processor - AMD Ryzen 5 3500U, Graphics Card - Radeon Graphics, Screen Size - 15.6inch full hd screen, RAM - 8GB, SSD - 256GB, Width - 36cm, OP - windows 10"
+                info: "Processor - AMD Ryzen 5 3500U, Graphics Card - Radeon Graphics, Screen Size - 15.6inch full hd screen, RAM - 8GB, SSD - 256GB, Width - 36cm, OP - windows 10",
+                extraImgs: [
+                    hp225,
+                    hp225Second,
+                    hp225Third,
+                ]
             }
         ]
     }
