@@ -26,7 +26,7 @@ function App() {
           <Header toggleCartDisplay={toggleCartDisplay} cartItems={cartItems} />
         <Routes>
           <Route path="/" element={ <Hero /> } />
-          <Route path="/shop/*" element={ <Shop addItemToCart={addItemToCart} /> } />
+          <Route path="/shop/*" element={ <Shop cartItems={cartItems} addItemToCart={addItemToCart} /> } />
           <Route path="/contact" element={ <Contact /> } />
         </Routes>
         {displayCart && <Cart cartItems={cartItems} />}

@@ -1,0 +1,19 @@
+.checkout {
+    background-color: #070707;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.checkout__table {
+    padding: 2rem;
+    border: white solid 2px;
+    border-radius: 1rem;
+}
+
+th, td {
+    padding: .5rem 2rem;
+}
+
+.table__quantity, .table__price {
+    text-align: center;
+}

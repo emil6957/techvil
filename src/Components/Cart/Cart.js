@@ -1,7 +1,8 @@
 import "./Cart.css";
+import { Link } from "react-router-dom";
 
 export default function Cart({ cartItems }) {
-    const cartItemElements = cartItems.map(item => <div className="flex"><p className="cart-item" key={item.id}>{item.name}</p><p>x1</p></div>)
+    const cartItemElements = cartItems.map(item => <div key={item.id} className="flex"><p className="cart-item">{item.name}</p><p>x1</p></div>)
 
     return (
         <div className="overlay" >
@@ -11,7 +12,7 @@ export default function Cart({ cartItems }) {
                     <p>Total</p>
                     <p>£550.98</p>
                 </div>
-                <button className="cart__button">Checkout</button>
+                <Link className="cart__button" to="/shop/checkout">Checkout</Link>
             </div>
         </div>
     )

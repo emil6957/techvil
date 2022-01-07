@@ -1,6 +1,7 @@
 import "./MoreInfo.css";
 import { nanoid } from "nanoid";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function MoreInfo({ addItemToCart, item }) {
     const { id, name, img, price, info, extraImgs } = item;
@@ -41,7 +42,7 @@ export default function MoreInfo({ addItemToCart, item }) {
                     <button onClick={incrementAmmount} className="ammount__button plus">+</button>
                 </div>
                 <button onClick={addItemsToCart} className="button">Add To Cart</button>
-                <button className="button">Checkout</button>
+                <Link to="/shop/checkout"><button className="button">Checkout</button></Link>
             </div>
             <div className="imgs">
                 <img className="img" src={mainImg} alt="Product" />
