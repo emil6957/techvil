@@ -12,8 +12,16 @@ function App() {
   const [displayCart, setDisplayCart] = useState(false);
 
   function addItemToCart(item) {
-    console.log(item);
-    setCartItems(prevCart => [...prevCart, item])
+    setCartItems(prevCart =>  {
+      for(let i = 0; i < prevCart.length; i++) {
+        if(prevCart[i].id === item.id) {
+          prevCart[i].ammount += 1;
+          return prevCart;
+        }
+      }
+      item.ammount = 1;
+      return [...prevCart, item];
+    }) 
   }
 
   function toggleCartDisplay() {
