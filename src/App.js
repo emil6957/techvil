@@ -5,17 +5,18 @@ import Shop from "./Components/Shop/Shop";
 import Contact from "./Components/Contact/Contact";
 import Cart from './Components/Cart/Cart';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [cartAmmount, setCartAmmount] = useState(0);
   const [displayCart, setDisplayCart] = useState(false);
 
   function addItemToCart(item) {
     setCartItems(prevCart =>  {
       for(let i = 0; i < prevCart.length; i++) {
         if(prevCart[i].id === item.id) {
-          prevCart[i].ammount += 1;
+          ++prevCart[i].ammount;
           return prevCart;
         }
       }
@@ -24,6 +25,16 @@ function App() {
     }) 
   }
 
+  useEffect(() => {
+    updateCartAmmount();
+  }, [cartItems])
+
+  function updateCartAmmount() {
+    setCartAmmount(cartItems.reduce((acc, currentItem) => acc + currentItem.ammount, 0));
+  }
+
+
+
   function toggleCartDisplay() {
     setDisplayCart(prevState => !prevState);
   }
@@ -31,7 +42,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-          <Header toggleCartDisplay={toggleCartDisplay} cartItems={cartItems} />
+          <Header toggleCartDisplay={toggleCartDisplay} cartAmmount={cartAmmount} />
         <Routes>
           <Route path="/" element={ <Hero /> } />
           <Route path="/shop/*" element={ <Shop cartItems={cartItems} addItemToCart={addItemToCart} /> } />
