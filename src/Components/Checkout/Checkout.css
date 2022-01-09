@@ -14,6 +14,6 @@ th, td {
     padding: .5rem 2rem;
 }
 
-.table__quantity, .table__price {
+.table__ammount, .table__price {
     text-align: center;
 }
