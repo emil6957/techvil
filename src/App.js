@@ -16,7 +16,7 @@ function App() {
     setCartItems(prevCart =>  {
       for(let i = 0; i < prevCart.length; i++) {
         if(prevCart[i].id === item.id) {
-          prevCart[i].ammount += 0.5;
+          prevCart[i].ammount += 0.5; //Ends up firing twice leading to a + 1
           return [...prevCart];
         }
       }
