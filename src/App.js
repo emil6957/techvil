@@ -14,12 +14,12 @@ function App() {
 
   function addItemToCart(item) {
     setCartItems(prevCart =>  {
-      prevCart.forEach(cartItem => {
-        if(cartItem.id === item.id) {
-          cartItem.ammount += 1;
-          return [...prevCart]
+      for(let i = 0; i < prevCart.length; i++) {
+        if(prevCart[i].id === item.id) {
+          prevCart[i].ammount += 1 //Ends up firing twice leading to a + 1
+          return [...prevCart];
         }
-      })
+      }
       item.ammount = 1;
       return [...prevCart, item];
     }) 
