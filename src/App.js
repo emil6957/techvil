@@ -13,16 +13,21 @@ function App() {
   const [displayCart, setDisplayCart] = useState(false);
 
   function addItemToCart(item) {
+    let itemInCart = false;
     setCartItems(prevCart =>  {
       for(let i = 0; i < prevCart.length; i++) {
         if(prevCart[i].id === item.id) {
-          prevCart[i].ammount += 1 //Ends up firing twice leading to a + 1
-          return [...prevCart];
+          itemInCart = true;
         }
       }
-      item.ammount = 1;
-      return [...prevCart, item];
+      if(itemInCart) {
+        return [...prevCart];
+      } else {
+        item.ammount = 0;
+        return [...prevCart, item];
+      }
     }) 
+    item.ammount += 1;
   }
 
   useEffect(() => {
