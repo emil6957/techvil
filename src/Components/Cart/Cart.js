@@ -8,10 +8,13 @@ export default function Cart({ cartItems }) {
 
     useEffect(() => {
         setTotal(Math.round(cartItems.reduce((acc, currentItem) => acc + (currentItem.price * currentItem.ammount), 0) * 100) / 100);
-    }, cartItems);
+    }, [cartItems]);
 
     return (
         <div className="overlay" >
+            {
+            cartItemElements.length 
+            ?
             <div className="cart">
                 {cartItemElements}
                 <div className="flex" >
@@ -20,6 +23,11 @@ export default function Cart({ cartItems }) {
                 </div>
                 <Link className="cart__button" to="/shop/checkout">Checkout</Link>
             </div>
+            :
+            <div className="cart center">
+                <p>No Items Currently In Cart</p>
+            </div>
+            }
         </div>
     )
 }

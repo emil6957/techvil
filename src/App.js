@@ -4,7 +4,7 @@ import Hero from "./Components/Hero/Hero";
 import Shop from "./Components/Shop/Shop";
 import Contact from "./Components/Contact/Contact";
 import Cart from './Components/Cart/Cart';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
 function App() {
