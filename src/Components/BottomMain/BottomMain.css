@@ -1,7 +1,8 @@
 .bottom-main {
     height: 85%;
     margin-top: 3rem;
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
     overflow-y: scroll;
 }
 
