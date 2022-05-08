@@ -13,7 +13,7 @@ export default function ShopMain({ getProduct, handleFilter, addItemToCart, filt
 
     return (
         <section className="shop" style={styles}>
-            <Aside handleFilter={handleFilter} />
+            <Aside filterBy={filterBy} handleFilter={handleFilter} />
             <Main getProduct={getProduct} addItemToCart={addItemToCart} filterBy={filterBy} />
         </section>
     )

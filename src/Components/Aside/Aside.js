@@ -1,11 +1,19 @@
 import "./Aside.css";
 import Arrow from "../../Images/Arrow.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Aside({ handleFilter }) {
+export default function Aside({ filterBy, handleFilter }) {
     const [showAllItems, setShowAllItems] = useState(false);
     const [showComputerPartsItems, setShowComputerPartsItems] = useState(false);
     const [showPreBuiltItems, setShowPreBuiltItems] = useState(false);
+    const [prevFiltered, setPrevFiltered] = useState();
+
+    useEffect(() => {
+        if(prevFiltered) { prevFiltered.classList.remove("aside__selected"); }
+        const filtered = document.getElementById(filterBy);
+        filtered.classList.add("aside__selected");
+        setPrevFiltered(filtered);
+    }, [filterBy])
 
     const stylesAll = {
         display: showAllItems ? "inherit" : "none",
@@ -49,15 +57,15 @@ export default function Aside({ handleFilter }) {
         <aside>
             <h2 className="aside__title">Catagories</h2>
             <div className="aside__all">
-                <div className="all__header" onClick={(e) => displayAll(e)}>
+                <div className="all__header">
                     <p className="all__title" id="all" onClick={(e) => handleFilter(e)}>All</p>
-                    <img style={allArrow} className="all__arrow arrow" src={Arrow} alt="Arrow" />
+                    <img style={allArrow} onClick={(e) => displayAll(e)} className="all__arrow arrow" src={Arrow} alt="Arrow" />
                 </div>
                 <div style={stylesAll} className="all__items">
                     <div className="all__computer-parts">
-                        <div className="computer-parts__header" onClick={(e) => displayComputerParts(e)}>
+                        <div className="computer-parts__header">
                             <p className="computer-parts__title" id="computer-parts" onClick={(e) => handleFilter(e)}>Computer Parts</p>
-                            <img style={computerPartsArrow} className="computer-parts__arrow arrow" src={Arrow} alt="Arrow" />
+                            <img style={computerPartsArrow} onClick={(e) => displayComputerParts(e)} className="computer-parts__arrow arrow" src={Arrow} alt="Arrow" />
                         </div>
                         <div style={stylesComputerParts} className="computer-parts__items">
                             <p className="item" id="CPU" onClick={(e) => handleFilter(e)}>CPU</p>
@@ -66,9 +74,9 @@ export default function Aside({ handleFilter }) {
                         </div>
                     </div>
                     <div className="all__pre-built">
-                        <div className="pre-built__header" onClick={(e) => displayPreBuilt(e)}>
+                        <div className="pre-built__header">
                             <p className="pre-built__title" id="pre-built" onClick={(e) => handleFilter(e)}>Pre-built</p>
-                            <img style={preBuiltArrow} className="pre-built__arrow arrow" src={Arrow} alt="Arrow" />
+                            <img style={preBuiltArrow} onClick={(e) => displayPreBuilt(e)} className="pre-built__arrow arrow" src={Arrow} alt="Arrow" />
                         </div>
                         <div style={stylesPreBuilt} className="pre-built__items">
                             <p className="item" id="Desktop" onClick={(e) => handleFilter(e)}>Desktop Computers</p>
