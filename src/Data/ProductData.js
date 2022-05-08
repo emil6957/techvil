@@ -133,10 +133,10 @@ const Data = {
         items: [
             {
                 id: nanoid(),
-                name: "Corsair Vengeance RGB Black PRO 16GB (2 x 8GB) DDR 3200MHz",
+                name: "Corsair Vengeancek PRO 16GB",
                 img: corsairDDR4,
                 price: 69.81,
-                info: "Dynamic multi-zone lighting, next generation software, 3200MHz 16GB (2 x 8GB), LED RGBS",
+                info: "Dynamic multi-zone lighting, next generation software, 3200MHz 16GB (2 x 8GB), LED RGBS, DDR",
                 extraImgs: [
                     corsairDDR4,
                     corsairDDR4Second,
@@ -145,7 +145,7 @@ const Data = {
             },
             {
                 id: nanoid(),
-                name: "Crucial RAM 16GB DDR4 2400MHz Desktop Memory",
+                name: "Crucial RAM 16GB DDR4",
                 img: crucialDDR4,
                 price: 57.64,
                 info: "DDR4, 16GB, 2400MHz, form factor = DIMM, item model = CT16G4DFD824A",
@@ -161,7 +161,7 @@ const Data = {
         items: [
             {
                 id: nanoid(),
-                name: "AlphaSync Diamond AMD Ryzen 5 16GB RAM 500GB SSD Gaming Desktop PC",
+                name: "AlphaSync Diamond Gaming PC",
                 img: alphaSync,
                 price: 699.99,
                 info: "AMD Ryzen 5  3.9GHz, 16GB RAM, 500GB SSD, Windows 11 Home, AMD Intergrated Graphics Card, cooling = AMD Standard cooler",
@@ -173,7 +173,7 @@ const Data = {
             },
             {
                 id: nanoid(),
-                name: "Elite AMD Ryzen 5 DDR4 4.2GHz 6 core",
+                name: "Elite AMD Ryzen 5",
                 img: elite,
                 price: 419.99,
                 info: "AMD Ryzen 5 3600 4.2Ghz Six Core DDR4 Business & Home PC Gaming System",
@@ -189,7 +189,7 @@ const Data = {
         items: [
             {
                 id: nanoid(),
-                name: "HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop",
+                name: "HP 255 Windows 10 Laptop",
                 img: hp225,
                 price: 457.97,
                 info: "Processor - AMD Ryzen 5 3500U, Graphics Card - Radeon Graphics, Screen Size - 15.6inch full hd screen, RAM - 8GB, SSD - 256GB, Width - 36cm, OP - windows 10",

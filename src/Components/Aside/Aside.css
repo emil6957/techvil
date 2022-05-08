@@ -1,9 +1,9 @@
 aside {
     font-size: 24px;
-    background-color: #858585;
     width: 20%;
     padding-top: 2rem;
     height: calc(100vh - 80px);
+    color: white;
 }
 
 .aside__title {
@@ -51,7 +51,7 @@ aside {
     left: -2rem;
     width: 2px;
     height: 100%;
-    background-color: black;
+    background-color: white;
 }
 
 .all__items p::after, .computer-parts__items p::after, .pre-built__items p::after {
@@ -61,7 +61,7 @@ aside {
     left: -2rem;
     height: 2px;
     width: 1rem;
-    background-color: black;
+    background-color: white;
 }
 
 .arrow {
