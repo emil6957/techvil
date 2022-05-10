@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/techvil/static/css/main.235e14d8.css",
-    "main.js": "/techvil/static/js/main.db0fadb2.js",
+    "main.css": "/techvil/static/css/main.64d9af90.css",
+    "main.js": "/techvil/static/js/main.b617b07a.js",
     "static/js/787.eb2b0e39.chunk.js": "/techvil/static/js/787.eb2b0e39.chunk.js",
+    "static/media/shop-bkg.jpg": "/techvil/static/media/shop-bkg.a0a3e2fc48f34481eb5e.jpg",
     "static/media/AMD Ryzen 7 3800X 3rd.jpg": "/techvil/static/media/AMD Ryzen 7 3800X 3rd.418b490c5bc2eabd271d.jpg",
     "static/media/AMD Ryzen 7 3800X.jpg": "/techvil/static/media/AMD Ryzen 7 3800X.da93d8a8d9bfdb6e11be.jpg",
     "static/media/AMD Ryzen 7 3800X 2nd.jpg": "/techvil/static/media/AMD Ryzen 7 3800X 2nd.a6de5246f59ea6f9c4a8.jpg",
@@ -11,12 +12,12 @@
     "static/media/AlphaSync Diamond 2nd.jpg": "/techvil/static/media/AlphaSync Diamond 2nd.8fc84aed92ad31a27b81.jpg",
     "static/media/Crucial RAM 16GB DDR4 2400MHz Desktop Memory 3rd.jpg": "/techvil/static/media/Crucial RAM 16GB DDR4 2400MHz Desktop Memory 3rd.b332167ec284bf454707.jpg",
     "static/media/AlphaSync Diamond.jpg": "/techvil/static/media/AlphaSync Diamond.9018bff7c9e825639b94.jpg",
+    "static/media/Contact-bkg.jpg": "/techvil/static/media/Contact-bkg.66be22770efec965d6d3.jpg",
     "static/media/Crucial RAM 16GB DDR4 2400MHz Desktop Memory.jpg": "/techvil/static/media/Crucial RAM 16GB DDR4 2400MHz Desktop Memory.27d9d8db487d00bd7113.jpg",
     "static/media/HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop.jpg": "/techvil/static/media/HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop.7e249f58df70febbf509.jpg",
     "static/media/HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop 2nd.jpg": "/techvil/static/media/HP 255 G8 AMD Ryzen 5-3500U 8GB 256GB SSD 15 Inch Windows 10 Laptop 2nd.a696cb38e11f6c0b7343.jpg",
     "static/media/Hero-bkg.jpg": "/techvil/static/media/Hero-bkg.c9663a1b435c4ed3d3c5.jpg",
     "static/media/Corsair Vengeance RGB Black PRO 16GB (2 x 8GB) DDR 3200MHz 3rd.jpg": "/techvil/static/media/Corsair Vengeance RGB Black PRO 16GB (2 x 8GB) DDR 3200MHz 3rd.31f681d093b2efacbef8.jpg",
-    "static/media/Contact-bkg.jpg": "/techvil/static/media/Contact-bkg.24f7d465415f6f68922a.jpg",
     "static/media/Crucial RAM 16GB DDR4 2400MHz Desktop Memory 2nd.jpg": "/techvil/static/media/Crucial RAM 16GB DDR4 2400MHz Desktop Memory 2nd.71e92c6eed25741c3366.jpg",
     "static/media/Corsair Vengeance RGB Black PRO 16GB (2 x 8GB) DDR 3200MHz 2nd.jpg": "/techvil/static/media/Corsair Vengeance RGB Black PRO 16GB (2 x 8GB) DDR 3200MHz 2nd.5853583aed40f2269f21.jpg",
     "static/media/Gigabyte GeForce GTX 1080 Ti.jpg": "/techvil/static/media/Gigabyte GeForce GTX 1080 Ti.3c2d42b022c49fc92d14.jpg",
@@ -42,13 +43,13 @@
     "static/media/Github.svg": "/techvil/static/media/Github.30bef7445e9e7f6eeac75173a0d7a37f.svg",
     "static/media/Cart.svg": "/techvil/static/media/Cart.dc72b7ea7a48c5835000f845537b7b81.svg",
     "static/media/MagnifyingGlass.svg": "/techvil/static/media/MagnifyingGlass.549597be947a13765d21a7cfb2e5b507.svg",
-    "static/media/Arrow.svg": "/techvil/static/media/Arrow.03b6506b33dafbfadf35e93583afdbce.svg",
-    "main.235e14d8.css.map": "/techvil/static/css/main.235e14d8.css.map",
-    "main.db0fadb2.js.map": "/techvil/static/js/main.db0fadb2.js.map",
+    "static/media/Arrow.svg": "/techvil/static/media/Arrow.694c6289d712cd446f684690df5c5c38.svg",
+    "main.64d9af90.css.map": "/techvil/static/css/main.64d9af90.css.map",
+    "main.b617b07a.js.map": "/techvil/static/js/main.b617b07a.js.map",
     "787.eb2b0e39.chunk.js.map": "/techvil/static/js/787.eb2b0e39.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.235e14d8.css",
-    "static/js/main.db0fadb2.js"
+    "static/css/main.64d9af90.css",
+    "static/js/main.b617b07a.js"
   ]
 }
