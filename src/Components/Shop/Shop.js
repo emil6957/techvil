@@ -14,6 +14,8 @@ export default function Shop({ cartItems, addItemToCart }) {
     }
 
     function getProduct(item) {
+        console.log("GETTING ITEM");
+        console.log(item);
         setDisplayProduct(item);
     }
 
