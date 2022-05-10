@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/techvil/static/css/main.64d9af90.css",
-    "main.js": "/techvil/static/js/main.b617b07a.js",
-    "static/js/787.eb2b0e39.chunk.js": "/techvil/static/js/787.eb2b0e39.chunk.js",
+    "main.js": "/techvil/static/js/main.dbe11391.js",
+    "static/js/787.330ac049.chunk.js": "/techvil/static/js/787.330ac049.chunk.js",
     "static/media/shop-bkg.jpg": "/techvil/static/media/shop-bkg.a0a3e2fc48f34481eb5e.jpg",
     "static/media/AMD Ryzen 7 3800X 3rd.jpg": "/techvil/static/media/AMD Ryzen 7 3800X 3rd.418b490c5bc2eabd271d.jpg",
     "static/media/AMD Ryzen 7 3800X.jpg": "/techvil/static/media/AMD Ryzen 7 3800X.da93d8a8d9bfdb6e11be.jpg",
@@ -45,11 +45,11 @@
     "static/media/MagnifyingGlass.svg": "/techvil/static/media/MagnifyingGlass.549597be947a13765d21a7cfb2e5b507.svg",
     "static/media/Arrow.svg": "/techvil/static/media/Arrow.694c6289d712cd446f684690df5c5c38.svg",
     "main.64d9af90.css.map": "/techvil/static/css/main.64d9af90.css.map",
-    "main.b617b07a.js.map": "/techvil/static/js/main.b617b07a.js.map",
-    "787.eb2b0e39.chunk.js.map": "/techvil/static/js/787.eb2b0e39.chunk.js.map"
+    "main.dbe11391.js.map": "/techvil/static/js/main.dbe11391.js.map",
+    "787.330ac049.chunk.js.map": "/techvil/static/js/787.330ac049.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64d9af90.css",
-    "static/js/main.b617b07a.js"
+    "static/js/main.dbe11391.js"
   ]
 }
