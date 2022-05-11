@@ -3,6 +3,9 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     padding-top: 6rem;
+    color: white;
+    height: calc(100vh - 80px);
+    background-color: black;
 }
 
 .content {
@@ -51,9 +54,17 @@
     padding-top: 2rem;
 }
 
+.img-container {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}
+
 .img {
     width: 400px;
     height: 400px;
+    padding: 25px;
+    object-fit: contain;
 }
 
 .ammount-container {
@@ -62,6 +73,8 @@
     align-items: center;
     border: solid black 1px;
     border-radius: .5rem;
+    background-color: white;
+    color: black;
 }
 
 .ammount {
@@ -93,6 +106,13 @@
     margin-top: 3rem;
 }
 
+.img-card-container {
+    height: 150px;
+    width: 150px;
+    border-radius: .5rem;
+    background-color: white;
+}
+
 .img-card {
     height: 150px;
     width: 150px;
@@ -100,4 +120,21 @@
     border-radius: .5rem;
     border: solid black 1px;
     cursor: pointer;
+}
+
+.main-img {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.arrow-right,
+.arrow-left {
+    height: 100px;    
+    width: 100px;
+    cursor: pointer;
+}
+
+.arrow-left {
+    transform: rotate(180deg);
 }

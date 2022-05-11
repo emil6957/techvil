@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../../Data/ProductData";
+import arrow from "../../Images/right-arrow.svg";
 
 export default function MoreInfo({ addItemToCart }) {
     const params = useParams();
@@ -10,6 +11,7 @@ export default function MoreInfo({ addItemToCart }) {
     const [ammount, setAmmount] = useState(1);
     const [loading, setLoading] = useState(true);
     const [mainImg, setMainImg] = useState();
+    const [allImgs, setAllImgs] = useState([]);
     
     useEffect(() => {
         Object.values(data).forEach(val => val.items.filter(val => {if(val.name === params.name) setItem(val);}));
@@ -21,13 +23,14 @@ export default function MoreInfo({ addItemToCart }) {
     useEffect(() => {
         if(loading === false) {
             setMainImg(item.img);
+            item.extraImgs.forEach(img => setAllImgs(prevState => [...prevState, img]));
         }
     }, [item])
     
     if(loading === false) {
         const listInfo = item.info.split(",");
         listElements = listInfo.map(item => <li className="info" key={nanoid()}>{item}</li>)
-        extraImgElements = item.extraImgs.map(img => <img onClick={() => setMainImg(img)} key={nanoid()} className="img-card" src={img} alt="Product" />)
+        extraImgElements = item.extraImgs.map(img => <div key={nanoid()} className="img-card-container"><img onClick={() => setMainImg(img)} className="img-card" src={img} alt="Product" /></div>)
     }
     
     function incrementAmmount() {
@@ -44,6 +47,30 @@ export default function MoreInfo({ addItemToCart }) {
         for(let i = 0; i < ammount; i++) {
             addItemToCart(item);
         } 
+    }
+
+    function prevImg() {
+        for(let i = 0; i < allImgs.length; i++) {
+            if(allImgs[i] === mainImg) {
+                if(i === 0) {
+                    setMainImg(allImgs[allImgs.length - 1]);
+                } else {
+                    setMainImg(allImgs[i-1]);
+                }
+            }
+        }
+    }
+
+    function nextImg() {
+        for(let i = 0; i < allImgs.length; i++) {
+            if(allImgs[i] === mainImg) {
+                if(i === allImgs.length - 1) {
+                    setMainImg(allImgs[0]);
+                } else {
+                    setMainImg(allImgs[i+1]);
+                }
+            }
+        }
     }
 
     return (
@@ -65,7 +92,13 @@ export default function MoreInfo({ addItemToCart }) {
                     <Link to="/shop/checkout"><button className="button">Checkout</button></Link>
                 </div>
                 <div className="imgs">
-                    <img className="img" src={mainImg} alt="Product" />
+                    <div className="main-img">
+                        <img onClick={prevImg} src={arrow} alt="left arrow" className="arrow-left" />
+                        <div className="img-container">
+                            <img className="img" src={mainImg} alt="Product" />
+                        </div>
+                        <img onClick={nextImg} src={arrow} alt="right arrow" className="arrow-right" />
+                    </div>
                     <div className="img-cards-container">
                         {extraImgElements}
                     </div>
