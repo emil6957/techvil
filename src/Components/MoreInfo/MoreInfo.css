@@ -58,6 +58,7 @@
     width: 400px;
     height: 400px;
     background-color: white;
+    border-radius: .5rem;
 }
 
 .img {
@@ -107,9 +108,10 @@
 }
 
 .img-card-container {
-    height: 150px;
-    width: 150px;
+    height: 156px;
+    width: 156px;
     border-radius: .5rem;
+    border: 6px solid white;
     background-color: white;
 }
 
@@ -117,8 +119,6 @@
     height: 150px;
     width: 150px;
     padding: 10px;
-    border-radius: .5rem;
-    border: solid black 1px;
     cursor: pointer;
 }
 
@@ -137,4 +137,14 @@
 
 .arrow-left {
     transform: rotate(180deg);
+}
+
+.current-img {
+    /* border-width: 2rem;
+    border-style: solid;
+    border-image: linear-gradient(to right, orange, red) 1; */
+    background: 
+        linear-gradient(white, white) padding-box,
+        linear-gradient(to right, orange, red) border-box;
+    border: 6px solid transparent;
 }
