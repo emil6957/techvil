@@ -8,7 +8,7 @@
     background: linear-gradient(155deg, #DB5DA5, #E38050);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    animation: slide 400ms forwards;
+    animation: slide-in 400ms forwards;
     animation-delay: 100ms;
     font-size: 36px;
     display: flex;
@@ -16,8 +16,19 @@
     overflow-y: scroll;
 }
 
-@keyframes slide {
+.cart.closing {
+    animation: slide-out 400ms backwards;
+    animation-delay: 100ms;
+}
+
+@keyframes slide-in {
+    0% { right: -600px; }
     100% { right: 0; }
+}
+
+@keyframes slide-out {
+    0% { right: 0; }
+    100% { right: -600px; }
 }
 
 .overlay {
@@ -31,8 +42,19 @@
     animation: fade-in 500ms forwards;
 }
 
+.overlay.closing {
+    pointer-events: none;
+    animation: fade-out 500ms forwards;
+}
+
 @keyframes fade-in {
+    0% { background-color: rgba(0, 0, 0, 0); }
     100% { background-color: rgba(0, 0, 0, .7); }
+}
+
+@keyframes fade-out {
+    0% { background-color: rgba(0, 0, 0, .7); }
+    100% { background-color: rgba(0, 0, 0, 0); }
 }
 
 .flex {
@@ -55,3 +77,4 @@
 .center {
     text-align: center;
 }
+
