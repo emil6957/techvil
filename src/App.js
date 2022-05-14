@@ -14,20 +14,20 @@ function App() {
 
   function addItemToCart(item) {
     let itemInCart = false;
-    setCartItems(prevCart =>  {
-      for(let i = 0; i < prevCart.length; i++) {
-        if(prevCart[i].id === item.id) {
-          itemInCart = true;
-        }
+    const cart = cartItems;
+    for(let i = 0; i < cart.length; i++) {
+      if(cart[i].id === item.id) {
+        itemInCart = true;
       }
-      if(itemInCart) {
-        return [...prevCart];
-      } else {
-        item.ammount = 0;
-        return [...prevCart, item];
-      }
-    }) 
-    item.ammount += 1;
+    }
+    if(itemInCart) {
+      item.ammount += 1;
+      setCartItems(prevCart => [...prevCart]);
+    }
+    else {
+      item.ammount = 1;
+      setCartItems(prevCart => [...prevCart, item]);
+    }
   }
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function App() {
           <Route path="/shop/*" element={ <Shop cartItems={cartItems} addItemToCart={addItemToCart} /> } />
           <Route path="/contact" element={ <Contact /> } />
         </Routes>
-        {displayCart && <Cart cartItems={cartItems} />}
+        <Cart displayCart={displayCart} cartItems={cartItems} />
       </div>
     </Router>
   );
