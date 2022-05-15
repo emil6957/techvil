@@ -6,9 +6,9 @@ import bkg from "../../Images/shop-bkg.jpg";
 export default function ShopMain({ getProduct, handleFilter, addItemToCart, filterBy }) {
 
     const styles = {
-        "background-image": `url(${bkg})`,
-        "background-repeat": "no-reapeat",
-        "background-size": "cover",
+        "backgroundImage": `url(${bkg})`,
+        "backgroundRepeat": "no-reapeat",
+        "backgroundSize": "cover",
     }
 
     return (
