@@ -19,7 +19,7 @@
     height: calc(100vh - 80px);
 }
 
-.checkout__table {
+.checkout__table-container {
     position: relative;
     padding: 2rem 2rem 1rem;
     border-radius: 1rem;
@@ -75,7 +75,7 @@ th, td {
     margin-bottom: 0;
 }
 
-.checkout__table::before {
+.checkout__table-container::before {
     content: "";
     position: absolute;
     left: 0;

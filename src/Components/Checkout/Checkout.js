@@ -42,19 +42,21 @@ export default function Checkout({ cartItems }) {
                     <button className="checkout-btn">Purchase</button>
                 </div>
             </form>
-            <table className="checkout__table">
-                <thead className="table__head">
-                    <tr>
-                        <th className="table__item">Item</th>
-                        <th className="table__ammount">Quantity</th>
-                        <th className="table__price">Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {cartItemElements}
-                </tbody>
+            <div className="checkout__table-container">
+                <table className="checkout__table">
+                    <thead className="table__head">
+                        <tr>
+                            <th className="table__item">Item</th>
+                            <th className="table__ammount">Quantity</th>
+                            <th className="table__price">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {cartItemElements}
+                    </tbody>
+                </table>
                 {<p className="checkout__total">Total ${total}</p>}
-            </table>
+            </div>
         </div>
     )
 }
