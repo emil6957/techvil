@@ -39,7 +39,7 @@ export default function Checkout({ cartItems }) {
                 <input id="email" name="email" value={checkoutData.email} onChange={(e) => checkoutDataChange(e)} type="email" placeholder="Email" autoComplete="off" required/>
                 <input id="address" name="address" value={checkoutData.address} onChange={(e) => checkoutDataChange(e)} type="text" placeholder="Address" autoComplete="off" required/>
                 <div className="checkout-btn-container">
-                    <button className="checkout-btn">Purchase</button>
+                    <button disabled={cartItems.length === 0} className="button checkout-btn">Purchase</button>
                 </div>
             </form>
             <div className="checkout__table-container">
