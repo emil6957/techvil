@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import data from "../../Data/ProductData";
 import arrow from "../../Images/right-arrow.svg";
 
-export default function MoreInfo({ addItemToCart }) {
+export default function MoreInfo({ cartItems, addItemToCart }) {
     const params = useParams();
     const [item, setItem] = useState();
     const [ammount, setAmmount] = useState(1);
@@ -89,7 +89,7 @@ export default function MoreInfo({ addItemToCart }) {
                         <button onClick={incrementAmmount} className="ammount__button plus">+</button>
                     </div>
                     <button onClick={addItemsToCart} className="button">Add To Cart</button>
-                    <Link to="/shop/checkout"><button className="button">Checkout</button></Link>
+                    <Link to="/shop/checkout"><button disabled={cartItems.length === 0} className="button">Checkout</button></Link>
                 </div>
                 <div className="imgs">
                     <div className="main-img">

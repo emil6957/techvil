@@ -46,6 +46,11 @@
     padding: .5rem 2rem;
 }
 
+.button:disabled {
+    background: linear-gradient(to right, grey, black);
+    border: 1px white solid;
+}
+
 .imgs {
     display: flex;
     flex-direction: column;
