@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Checkout.css";
 
 export default function Checkout({ cartItems }) {
+    const [total, setTotal] = useState(0);
     const [checkoutData, setCheckoutData] = useState({
         firstName: "",
         lastName: "",
         email: "",
         address: ""
     });
+
+    useEffect(() => {
+        const sum = cartItems.reduce((acc, curr) => acc + Math.round((curr.price * curr.ammount) * 100) / 100, 0)
+        setTotal(sum);
+    }, [])
 
     function checkoutDataChange(event) {
         const {name, value} = event.target
@@ -47,6 +53,7 @@ export default function Checkout({ cartItems }) {
                 <tbody>
                     {cartItemElements}
                 </tbody>
+                {<p className="checkout__total">Total ${total}</p>}
             </table>
         </div>
     )
