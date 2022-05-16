@@ -12,7 +12,7 @@ function App() {
   const [cartAmmount, setCartAmmount] = useState(0);
   const [displayCart, setDisplayCart] = useState(false);
 
-  function addItemToCart(item) {
+  function addItemToCart(item, ammount = 1) {
     let itemInCart = false;
     const cart = cartItems;
     for(let i = 0; i < cart.length; i++) {
@@ -21,11 +21,11 @@ function App() {
       }
     }
     if(itemInCart) {
-      item.ammount += 1;
+      item.ammount += ammount;
       setCartItems(prevCart => [...prevCart]);
     }
     else {
-      item.ammount = 1;
+      item.ammount = ammount;
       setCartItems(prevCart => [...prevCart, item]);
     }
   }
@@ -53,7 +53,7 @@ function App() {
           <Route path="/shop/*" element={ <Shop cartItems={cartItems} addItemToCart={addItemToCart} /> } />
           <Route path="/contact" element={ <Contact /> } />
         </Routes>
-        <Cart displayCart={displayCart} cartItems={cartItems} />
+        <Cart toggleCartDisplay={toggleCartDisplay} displayCart={displayCart} cartItems={cartItems} />
       </div>
     </Router>
   );
