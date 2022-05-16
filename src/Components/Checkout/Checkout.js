@@ -11,8 +11,8 @@ export default function Checkout({ cartItems }) {
     });
 
     useEffect(() => {
-        const sum = cartItems.reduce((acc, curr) => acc + Math.round((curr.price * curr.ammount) * 100) / 100, 0)
-        setTotal(sum);
+        const sum = cartItems.reduce((acc, curr) => acc + (curr.price * curr.ammount), 0);
+        setTotal(Math.round((sum) * 100) / 100);
     }, [])
 
     function checkoutDataChange(event) {
