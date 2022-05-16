@@ -43,12 +43,6 @@ export default function MoreInfo({ cartItems, addItemToCart }) {
         }
     }
 
-    function addItemsToCart() {
-        for(let i = 0; i < ammount; i++) {
-            addItemToCart(item);
-        } 
-    }
-
     function prevImg() {
         for(let i = 0; i < allImgs.length; i++) {
             if(allImgs[i] === mainImg) {
@@ -88,7 +82,7 @@ export default function MoreInfo({ cartItems, addItemToCart }) {
                         <p className="ammount">{ammount}</p>
                         <button onClick={incrementAmmount} className="ammount__button plus">+</button>
                     </div>
-                    <button onClick={addItemsToCart} className="button">Add To Cart</button>
+                    <button onClick={() => addItemToCart(item, ammount)} className="button">Add To Cart</button>
                     <Link to="/shop/checkout"><button disabled={cartItems.length === 0} className="button">Checkout</button></Link>
                 </div>
                 <div className="imgs">
