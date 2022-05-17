@@ -8,6 +8,7 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
 function App() {
+  const [cartOpened, setCartOpened] = useState(false); // Checks for first time the cart is clicked to open to avoid bug with playing closing animation on refresh / first page load
   const [cartItems, setCartItems] = useState([]);
   const [cartAmmount, setCartAmmount] = useState(0);
   const [displayCart, setDisplayCart] = useState(false);
@@ -38,6 +39,9 @@ function App() {
     setCartAmmount(cartItems.reduce((acc, currentItem) => acc + currentItem.ammount, 0));
   }
 
+  function cartBeenOpened() {
+    setCartOpened(true);
+  }
 
 
   function toggleCartDisplay() {
@@ -47,13 +51,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-          <Header toggleCartDisplay={toggleCartDisplay} cartAmmount={cartAmmount} />
+          <Header cartBeenOpened={cartBeenOpened} toggleCartDisplay={toggleCartDisplay} cartAmmount={cartAmmount} />
         <Routes>
           <Route path="/" element={ <Hero /> } />
           <Route path="/shop/*" element={ <Shop cartItems={cartItems} addItemToCart={addItemToCart} /> } />
           <Route path="/contact" element={ <Contact /> } />
         </Routes>
-        <Cart toggleCartDisplay={toggleCartDisplay} displayCart={displayCart} cartItems={cartItems} />
+        <Cart cartOpened={cartOpened} toggleCartDisplay={toggleCartDisplay} displayCart={displayCart} cartItems={cartItems} />
       </div>
     </Router>
   );
