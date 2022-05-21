@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/techvil/static/css/main.64d9af90.css",
-    "main.js": "/techvil/static/js/main.dbe11391.js",
+    "main.css": "/techvil/static/css/main.12b69892.css",
+    "main.js": "/techvil/static/js/main.83aa323e.js",
     "static/js/787.330ac049.chunk.js": "/techvil/static/js/787.330ac049.chunk.js",
     "static/media/shop-bkg.jpg": "/techvil/static/media/shop-bkg.a0a3e2fc48f34481eb5e.jpg",
     "static/media/AMD Ryzen 7 3800X 3rd.jpg": "/techvil/static/media/AMD Ryzen 7 3800X 3rd.418b490c5bc2eabd271d.jpg",
@@ -40,16 +40,17 @@
     "static/media/Elite AMD Ryzen 5 3600 4.2GHz 6 Core DDR4 3rd.jpg": "/techvil/static/media/Elite AMD Ryzen 5 3600 4.2GHz 6 Core DDR4 3rd.6ea3c2a1f1c0fbfd2058.jpg",
     "static/media/Elite AMD Ryzen 5 3600 4.2GHz 6 Core DDR4 2nd.jpg": "/techvil/static/media/Elite AMD Ryzen 5 3600 4.2GHz 6 Core DDR4 2nd.6d2229b7ed525f25eb6f.jpg",
     "index.html": "/techvil/index.html",
+    "static/media/right-arrow.svg": "/techvil/static/media/right-arrow.940225891126a3d0928e5f7157dc7429.svg",
     "static/media/Github.svg": "/techvil/static/media/Github.30bef7445e9e7f6eeac75173a0d7a37f.svg",
     "static/media/Cart.svg": "/techvil/static/media/Cart.dc72b7ea7a48c5835000f845537b7b81.svg",
     "static/media/MagnifyingGlass.svg": "/techvil/static/media/MagnifyingGlass.549597be947a13765d21a7cfb2e5b507.svg",
     "static/media/Arrow.svg": "/techvil/static/media/Arrow.694c6289d712cd446f684690df5c5c38.svg",
-    "main.64d9af90.css.map": "/techvil/static/css/main.64d9af90.css.map",
-    "main.dbe11391.js.map": "/techvil/static/js/main.dbe11391.js.map",
+    "main.12b69892.css.map": "/techvil/static/css/main.12b69892.css.map",
+    "main.83aa323e.js.map": "/techvil/static/js/main.83aa323e.js.map",
     "787.330ac049.chunk.js.map": "/techvil/static/js/787.330ac049.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64d9af90.css",
-    "static/js/main.dbe11391.js"
+    "static/css/main.12b69892.css",
+    "static/js/main.83aa323e.js"
   ]
 }
