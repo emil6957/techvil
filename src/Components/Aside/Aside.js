@@ -39,6 +39,14 @@ export default function Aside({ filterBy, handleFilter }) {
         transform: `rotate(${showPreBuiltItems ? "180deg" : "0deg"})`
     }
 
+    function shortenAfter(preBuilt, computerParts) { // A function to make sure the after element of all__items is the correct height
+        if(preBuilt === true && computerParts === false) {
+            document.querySelector(".all__items").classList.add("shorten-after");
+        } else {
+            document.querySelector(".all__items").classList.remove("shorten-after");
+        }
+    }
+
     function displayAll(event) {
         setShowAllItems(prevBool => !prevBool);
         setShowComputerPartsItems(false);
@@ -46,10 +54,12 @@ export default function Aside({ filterBy, handleFilter }) {
     }
 
     function displayComputerParts(event) {
+        shortenAfter(showPreBuiltItems, !showComputerPartsItems);
         setShowComputerPartsItems(prevBool => !prevBool);
     }
 
     function displayPreBuilt(event) {
+        shortenAfter(!showPreBuiltItems, showComputerPartsItems);
         setShowPreBuiltItems(prevBool => !prevBool);
     }
 
