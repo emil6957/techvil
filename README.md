@@ -39,8 +39,43 @@ Users should be able to:
 
 ### What I learned
 
+One of the main things i learnt here is to do dynamic routing
+
+```js
+<Route path="/:name" element={<MoreInfo cartItems={cartItems} addItemToCart={addItemToCart} item={displayProduct} />} />
+```
+Here in the MoreInfo component i can use the parameter in the URL to find the item data and create unique pages for each item.
+```js
+const params = useParams();
+const [item, setItem] = useState();
+const [ammount, setAmmount] = useState(1);
+const [loading, setLoading] = useState(true);
+const [mainImg, setMainImg] = useState();
+const [allImgs, setAllImgs] = useState([]);
+
+useEffect(() => {
+    Object.values(data).forEach(val => val.items.filter(val => {if(val.name === params.name) setItem(val);}));
+    setLoading(false);
+}, [])
+
+let listElements;
+let extraImgElements;
+useEffect(() => {
+    if(loading === false) {
+        setMainImg(item.img);
+        item.extraImgs.forEach(img => setAllImgs(prevState => [...prevState, img]));
+    }
+}, [item])
+
+if(loading === false) {
+    const listInfo = item.info.split(",");
+    listElements = listInfo.map(item => <li className="info" key={nanoid()}>{item}</li>)
+    extraImgElements = item.extraImgs.map(img => <div key={nanoid()} className={`img-card-container ${img === mainImg ? "current-img" : ""}`}><img onClick={() => setMainImg(img)} className="img-card" src={img} alt="Product" /></div>)
+    }
+```
 
 
 ### Useful resources
 
+- (https://reactrouter.com/en/main/route/route)[https://reactrouter.com/en/main/route/route] - This resource was really helpful for learning about dynamic routing
 
