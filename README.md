@@ -71,7 +71,7 @@ if(loading === false) {
     const listInfo = item.info.split(",");
     listElements = listInfo.map(item => <li className="info" key={nanoid()}>{item}</li>)
     extraImgElements = item.extraImgs.map(img => <div key={nanoid()} className={`img-card-container ${img === mainImg ? "current-img" : ""}`}><img onClick={() => setMainImg(img)} className="img-card" src={img} alt="Product" /></div>)
-    }
+}
 ```
 
 
