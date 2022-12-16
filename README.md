@@ -74,6 +74,31 @@ if(loading === false) {
 }
 ```
 
+Another thing I learnt here was creating a way for users to search, sort and filter items.
+Here are the functions i used in the Aside component to filter the items
+```js
+const [showAllItems, setShowAllItems] = useState(false);
+const [showComputerPartsItems, setShowComputerPartsItems] = useState(false);
+const [showPreBuiltItems, setShowPreBuiltItems] = useState(false);
+    
+function displayAll(event) {
+    setShowAllItems(prevBool => !prevBool);
+    setShowComputerPartsItems(false);
+    setShowPreBuiltItems(false);
+}
+
+function displayComputerParts(event) {
+    shortenAfter(showPreBuiltItems, !showComputerPartsItems);
+    setShowComputerPartsItems(prevBool => !prevBool);
+}
+
+function displayPreBuilt(event) {
+    shortenAfter(!showPreBuiltItems, showComputerPartsItems);
+    setShowPreBuiltItems(prevBool => !prevBool);
+}
+
+```
+
 
 ### Useful resources
 
