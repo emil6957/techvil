@@ -102,5 +102,5 @@ function displayPreBuilt(event) {
 
 ### Useful resources
 
--[https://reactrouter.com/en/main/route/route](https://reactrouter.com/en/main/route/route) - This resource was really helpful for learning about dynamic routing
+- [https://reactrouter.com/en/main/route/route](https://reactrouter.com/en/main/route/route) - This resource was really helpful for learning about dynamic routing
 
